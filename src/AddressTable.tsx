@@ -72,6 +72,12 @@ const AddressTable = () => {
               if (a[sortKey.key] < b[sortKey.key]) {
                 return sortKey.order ? -1 : 1;
               }
+
+              if (a[sortKey.key] > b[sortKey.key]) {
+                return sortKey.order ? 1 : -1;
+              }
+
+              return 0;
             })
             .map((user, index) => (
               <tr key={index}>
